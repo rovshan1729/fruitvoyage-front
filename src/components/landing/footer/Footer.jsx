@@ -10,9 +10,11 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
 } from 'react-icons/fa';
-import logo from './../../../../public/Agro-Group-Agriculture-Logo-Design-Transparent-PNG.png';
+import logo from '/1.png';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className='bg-[#101920f5] px-6 py-10 text-white'>
       <div className='mx-auto max-w-7xl flex flex-col gap-10 md:flex-row md:justify-between'>
@@ -20,10 +22,10 @@ const Footer = () => {
         <div className='flex flex-col items-center md:items-start gap-4'>
           <div className='flex items-center gap-3'>
             <img src={logo} alt='Logo' className='h-16 w-16 object-contain' />
-            <h2 className='text-2xl font-bold'>EXIM AGRO</h2>
+            <h2 className='text-2xl font-bold'>FRUIT VOYAGE</h2>
           </div>
           <p className='text-center md:text-left text-sm text-gray-300'>
-            Copyright © 2017 - 2023 OOO "EXIM AGRO GROUP"
+            Copyright © 2017 - 2025 OOO "FRUIT VOYAGE GROUP"
           </p>
         </div>
 
@@ -52,7 +54,7 @@ const Footer = () => {
           <div className='flex items-start gap-2 text-center md:text-left'>
             <FaMapMarkerAlt className='mt-1 text-white' />
             <span>
-              Republic of Uzbekistan, Fergana Region, Uchko‘prik District, Bog'i Boston
+              {t('location')}
             </span>
           </div>
         </div>

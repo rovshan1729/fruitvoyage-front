@@ -5,12 +5,16 @@ import Hero from '@components/landing/hero/Hero';
 import Partners from '@components/landing/partners/Partners';
 import Products from '@components/landing/products/Products';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Landing = () => {
+  const { i18n } = useTranslation();
+
   return (
     <div>
       <section id='home'>
-        <Hero />
+        {/* Til o'zgarganda Hero qayta render bo'ladi */}
+        <Hero key={i18n.language} />
       </section>
       <Partners />
       <Experience />
