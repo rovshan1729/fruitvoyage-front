@@ -14,10 +14,10 @@ const Contact = () => {
       required: t('validation.requiredName'),
       minLength: { value: 3, message: t('validation.minName') },
     },
-    phone: {
+    phone_number: {
       required: t('validation.requiredPhone'),
       pattern: {
-        value: /^\+998(9[0-9]{8})$/,
+        value: /^\+998\d{9}$/,
         message: t('validation.invalidPhone'),
       },
     },
@@ -77,6 +77,7 @@ const Contact = () => {
           {t('contactTitle')}
         </h2>
 
+        {/* Name */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('name')}</label>
           <Controller
@@ -88,17 +89,18 @@ const Contact = () => {
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
         </div>
 
+        {/* Phone Number */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('phone')}</label>
           <Controller
             name="phone_number"
             control={control}
-            rules={rules.phone}
+            rules={rules.phone_number}
             render={({ field }) => (
               <Input
                 {...field}
                 size="large"
-                placeholder="+998901234567"
+                placeholder="+998XXXXXXXXX"
                 value={field.value || '+998'}
                 onChange={(e) => {
                   let val = e.target.value.replace(/[^\d+]/g, '');
@@ -110,9 +112,12 @@ const Contact = () => {
               />
             )}
           />
-          {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
+          {errors.phone_number && (
+            <p className="text-red-500 text-sm mt-1">{errors.phone_number.message}</p>
+          )}
         </div>
 
+        {/* Email */}
         <div>
           <label className="block text-base sm:text-lg mb-1">Email</label>
           <Controller
@@ -124,6 +129,7 @@ const Contact = () => {
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
         </div>
 
+        {/* Company */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('company')}</label>
           <Controller
@@ -135,6 +141,7 @@ const Contact = () => {
           {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company.message}</p>}
         </div>
 
+        {/* Message */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('message')}</label>
           <Controller
@@ -148,6 +155,7 @@ const Contact = () => {
           {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
         </div>
 
+        {/* Submit */}
         <Button
           type="primary"
           htmlType="submit"

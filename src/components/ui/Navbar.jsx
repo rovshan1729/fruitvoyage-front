@@ -64,7 +64,11 @@ const Navbar = () => {
           <ul className='flex flex-col gap-4 text-gray-700'>
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className='block hover:text-red-500'>
+                <a
+                  href={link.href}
+                  className='block hover:text-red-500'
+                  onClick={() => setMenuOpen(false)}
+                >
                   {link.name}
                 </a>
               </li>
@@ -75,15 +79,19 @@ const Navbar = () => {
             <Select
               defaultValue={i18n.language}
               className='w-full'
-              onChange={handleChangeLanguage}
+              onChange={(value) => {
+                handleChangeLanguage(value);
+                setMenuOpen(false);
+              }}
               options={[
                 { value: 'en', label: 'Eng' },
-                { value: 'ru', label: 'Rus' },
+                { value: 'ru', label: 'Рус' },
               ]}
             />
           </div>
         </div>
       )}
+
     </nav>
   );
 };
