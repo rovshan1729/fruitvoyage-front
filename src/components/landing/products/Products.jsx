@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+ import React, { useEffect, useState } from 'react';
 import { getCategories, getCategoriesById } from 'src/services/categories';
 import ProductCategories from './ProductCategories';
 import ProductsList from './product-card/ProductsList';

@@ -24,6 +24,7 @@ const ProductsList = ({ data }) => {
       >
         <FaArrowRight className="text-lg text-gray-600" />
       </button>
+
       <Swiper
         modules={[Navigation]}
         spaceBetween={20}
@@ -38,7 +39,6 @@ const ProductsList = ({ data }) => {
         loop={false}
         breakpoints={{
           0: { slidesPerView: 1 },
-          640: { slidesPerView: 1.2 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
@@ -46,15 +46,25 @@ const ProductsList = ({ data }) => {
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="group relative mx-2 my-4 h-80 overflow-hidden rounded-2xl bg-white shadow-xl transition-transform hover:shadow-2xl">
+              
               <img
                 src={item.cover_image}
                 alt={item.name}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
+              
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 w-full translate-y-full bg-black/70 p-4 text-white transition-transform duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0">
-                <h4 className="mb-2 text-lg font-bold md:text-xl">{item.name}</h4>
-                <div className="grid grid-cols-2 gap-2 text-xs md:text-sm">
+
+              <div className="absolute bottom-0 left-0 w-full bg-black/20 p-3 text-white 
+                transition-transform duration-500 
+                group-hover:translate-y-0
+                translate-y-0 
+                md:translate-y-full 
+                md:group-hover:translate-y-0
+                text-[10px] sm:text-xs md:text-sm"
+              >
+                <h4 className="mb-1 text-base sm:text-lg font-bold">{item.name}</h4>
+                <div className="grid grid-cols-2 gap-1 sm:gap-2">
                   <div>
                     <p className="font-medium">Срок заготовки:</p>
                     <p>{item.procurement_period}</p>
@@ -84,8 +94,9 @@ const ProductsList = ({ data }) => {
                     <p>{item.caliber}</p>
                   </div>
                 </div>
+                
                 {item.job && (
-                  <p className="mt-2 text-xs text-gray-300">{item.job}</p>
+                  <p className="mt-1 text-[9px] sm:text-xs text-gray-300">{item.job}</p>
                 )}
               </div>
             </div>
