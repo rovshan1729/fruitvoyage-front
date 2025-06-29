@@ -38,6 +38,7 @@ const ProductsList = ({ data }) => {
         loop={false}
         breakpoints={{
           0: { slidesPerView: 1 },
+          640: { slidesPerView: 1.2 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
@@ -51,9 +52,9 @@ const ProductsList = ({ data }) => {
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 w-full translate-y-full bg-black/70 p-4 text-white transition-transform duration-500 group-hover:translate-y-0">
-                <h4 className="mb-2 text-xl font-bold">{item.name}</h4>
-                <div className="grid grid-cols-2 gap-2 text-sm">
+              <div className="absolute bottom-0 left-0 w-full translate-y-full bg-black/70 p-4 text-white transition-transform duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0">
+                <h4 className="mb-2 text-lg font-bold md:text-xl">{item.name}</h4>
+                <div className="grid grid-cols-2 gap-2 text-xs md:text-sm">
                   <div>
                     <p className="font-medium">Срок заготовки:</p>
                     <p>{item.procurement_period}</p>
