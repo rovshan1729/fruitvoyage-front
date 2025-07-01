@@ -10,7 +10,7 @@ const resources = {
             aboutDesc: 'Fruit Voyage is a part of the Exim Agro Group and was established in 2019. We export fresh, dried, and freeze-dried fruits, vegetables, and berries from all regions of Uzbekistan. Our shipments reach customers in Japan, Russia, Latvia, and other countries across Europe and Asia.',
             Home: 'Home',
             Products: 'Products',
-            Contact: 'Contact',
+            Contact: 'Contacts',
             exports: 'Years of reliable exports of Uzbek products to global markets.',
             network: 'A network of partner farms across Uzbekistan.',
             geography: 'countries — Geography of Fresh, Dried, and Freeze-Dried Fruit and Vegetable Exports from Uzbekistan.',

@@ -77,7 +77,6 @@ const Contact = () => {
           {t('contactTitle')}
         </h2>
 
-        {/* Name */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('name')}</label>
           <Controller
@@ -89,7 +88,6 @@ const Contact = () => {
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
         </div>
 
-        {/* Phone Number */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('phone')}</label>
           <Controller
@@ -100,13 +98,10 @@ const Contact = () => {
               <Input
                 {...field}
                 size="large"
-                placeholder="+998XXXXXXXXX"
-                value={field.value || '+998'}
+                placeholder={t('phone')}
+                value={field.value || ''}
                 onChange={(e) => {
-                  let val = e.target.value.replace(/[^\d+]/g, '');
-                  if (!val.startsWith('+998')) {
-                    val = '+998';
-                  }
+                  const val = e.target.value.replace(/\D/g, ''); 
                   field.onChange(val);
                 }}
               />
@@ -117,7 +112,6 @@ const Contact = () => {
           )}
         </div>
 
-        {/* Email */}
         <div>
           <label className="block text-base sm:text-lg mb-1">Email</label>
           <Controller
@@ -129,7 +123,6 @@ const Contact = () => {
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
         </div>
 
-        {/* Company */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('company')}</label>
           <Controller
@@ -141,7 +134,6 @@ const Contact = () => {
           {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company.message}</p>}
         </div>
 
-        {/* Message */}
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('message')}</label>
           <Controller
@@ -155,7 +147,6 @@ const Contact = () => {
           {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
         </div>
 
-        {/* Submit */}
         <Button
           type="primary"
           htmlType="submit"

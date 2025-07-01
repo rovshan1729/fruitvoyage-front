@@ -23,14 +23,14 @@ const Navbar = () => {
     'hover:text-red-500 hover:border hover:bg-red-50 border border-transparent rounded-full px-4 py-2 transition-all duration-300 ease-in-out';
 
   return (
-    <nav className='relative'>
+    <nav className='relative bg-[#101920f5]'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-4'>
         <a href='#home' className='flex items-center justify-center gap-2'>
-          <img src={logotype} alt='logotype' className='h-15 w-15' />
+          <img src={logotype} alt='logotype' className='h-14 w-14 sm:h-16 sm:w-16 md:h-18 md:w-18' />
         </a>
 
         <div className='hidden items-center gap-10 xl:flex'>
-          <ul className='flex items-center gap-9 text-lg text-gray-500'>
+          <ul className='flex items-center gap-9 text-lg text-white'>
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a href={link.href} className={linkClass}>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className='block text-2xl text-gray-700 xl:hidden'
+          className='block text-2xl text-white xl:hidden'
         >
           <FiMenu />
         </button>
