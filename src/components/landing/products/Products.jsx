@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 const Products = () => {
   const { t, i18n } = useTranslation ();
   const [product, setProduct] = useState([]);
-  console.log(i18n.language);
   
   const [selectCategory, setselectCategory] = useState(1)
   const [category, setCategory] = useState([]);

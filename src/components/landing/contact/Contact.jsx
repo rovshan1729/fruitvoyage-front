@@ -90,37 +90,33 @@ const Contact = () => {
         <div>
           <label className="block text-base sm:text-lg mb-1">{t('phone')}</label>
           <Controller
-  name="phone_number"
-  control={control}
-  rules={rules.phone_number}
-  render={({ field }) => (
-    <Input
-      {...field}
-      size="large"
-      placeholder={t('phone')}
-      value={field.value || ''}
-      onChange={(e) => {
-        // + belgisini va faqat raqamlarni qabul qilish
-        let val = e.target.value;
-        if (val === '+') {
-          field.onChange(val);
-          return;
-        }
-        // Agar + bilan boshlanmasa, faqat raqamlarni qabul qil
-        if (val.startsWith('+')) {
-          // + dan keyingi qismda faqat raqamlar bo'lishi kerak
-          const parts = val.split('+');
-          const numbers = parts[1] ? parts[1].replace(/\D/g, '') : '';
-          val = '+' + numbers;
-        } else {
-          // + bo'lmasa, faqat raqamlar
-          val = val.replace(/\D/g, '');
-        }
-        field.onChange(val);
-      }}
-    />
-  )}
-/>
+            name="phone_number"
+            control={control}
+            rules={rules.phone_number}
+            render={({ field }) => (
+              <Input
+                {...field}
+                size="large"
+                placeholder={t('phone')}
+                value={field.value || ''}
+                onChange={(e) => {
+                  let val = e.target.value;
+                  if (val === '+') {
+                    field.onChange(val);
+                    return;
+                  }
+                  if (val.startsWith('+')) {
+                    const parts = val.split('+');
+                    const numbers = parts[1] ? parts[1].replace(/\D/g, '') : '';
+                    val = '+' + numbers;
+                  } else {
+                    val = val.replace(/\D/g, '');
+                  }
+                  field.onChange(val);
+                }}
+              />
+            )}
+          />
           {errors.phone_number && (
             <p className="text-red-500 text-sm mt-1">{errors.phone_number.message}</p>
           )}
