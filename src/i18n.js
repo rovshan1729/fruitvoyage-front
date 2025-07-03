@@ -29,6 +29,14 @@ const resources = {
             successMessage: 'Message sent successfully!',
             errorMessage: 'An error occurred!',
 
+            procurementPeriod: 'Procurement period:',
+            grade: 'Grade:',
+            type: 'Type:',
+            quantityBased: 'Quantity Based:',
+            harvestSeason: 'Harvers season:',
+            madeIn: 'Made in:',
+            caliber: 'Caliber:',
+
             validation: {
                 requiredName: 'Name is required',
                 minName: 'Name must be at least 3 characters',
@@ -70,6 +78,14 @@ const resources = {
             sending: 'Отправляется...',
             successMessage: 'Сообщение успешно отправлено!',
             errorMessage: 'Произошла ошибка!',
+
+            procurementPeriod: 'Срок заготовки:',
+            grade: 'Сорт:',
+            type: 'Тип:',
+            quantityBased: 'Кол-во:',
+            harvestSeason: 'Сезон сбора:',
+            madeIn: 'Произведено в:',
+            caliber: 'Калибр:',
 
             validation: {
                 requiredName: 'Имя обязательно',

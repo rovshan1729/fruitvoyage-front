@@ -5,24 +5,25 @@ import ProductsList from './product-card/ProductsList';
 import { useTranslation } from 'react-i18next';
 
 const Products = () => {
-  const { t } = useTranslation ();
+  const { t, i18n } = useTranslation ();
   const [product, setProduct] = useState([]);
+  console.log(i18n.language);
+  
   const [selectCategory, setselectCategory] = useState(1)
   const [category, setCategory] = useState([]);
   const getCategory = async () => {
-    const categories = await getCategories();
+    const categories = await getCategories(i18n.language);
     setCategory(categories);
   };
   const getProduct = async () => {
-    const products = await getCategoriesById(selectCategory);
+    const products = await getCategoriesById(selectCategory, i18n.language);
     setProduct(products.products);
   }
 
   useEffect(() => {
     getCategory();
     getProduct();
-    console.log(selectCategory);
-  }, [selectCategory]);
+  }, [selectCategory, i18n.language]);
 
 
   return (
