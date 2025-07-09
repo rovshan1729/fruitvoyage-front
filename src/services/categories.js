@@ -1,8 +1,6 @@
 import api from "./api"
 
 export const getCategories = async (lang) => {
-    console.log(lang);
-
     const categories = await api.get("categories/", {
         headers: {
             "content-language": lang,

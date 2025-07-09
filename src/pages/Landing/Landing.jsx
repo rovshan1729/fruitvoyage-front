@@ -2,6 +2,7 @@ import Contact from '@components/landing/contact/Contact';
 import Experience from '@components/landing/experience/Experience';
 import Footer from '@components/landing/footer/Footer';
 import Hero from '@components/landing/hero/Hero';
+import News from '@components/landing/news/News';
 import Partners from '@components/landing/partners/Partners';
 import Products from '@components/landing/products/Products';
 import React from 'react';
@@ -13,13 +14,15 @@ const Landing = () => {
   return (
     <div>
       <section id='home'>
-        {/* Til o'zgarganda Hero qayta render bo'ladi */}
         <Hero key={i18n.language} />
       </section>
       <Partners />
       <Experience />
       <section id='products'>
         <Products />
+      </section>
+      <section id='news'>
+        <News/>
       </section>
       <section id='contact'>
         <Contact />

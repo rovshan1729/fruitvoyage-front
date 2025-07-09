@@ -17,7 +17,7 @@ const Products = () => {
   const getProduct = async () => {
     const products = await getCategoriesById(selectCategory, i18n.language);
     setProduct(products.products);
-  }
+  }  
 
   useEffect(() => {
     getCategory();

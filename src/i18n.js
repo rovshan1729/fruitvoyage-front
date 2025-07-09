@@ -49,7 +49,12 @@ const resources = {
                 minMessage: 'Message must be at least 5 characters',
             },
 
-            location: 'Republic of Uzbekistan, Fergana Region, Uchko‘prik District, Bog‘i Boston'
+            location: 'Republic of Uzbekistan, Fergana Region, Uchko‘prik District, Bog‘i Boston',
+
+            news: 'News',
+            allNews: 'All news',
+            moreDetails: 'More details',
+            more: 'All products'
         }
     },
     ru: {
@@ -99,7 +104,12 @@ const resources = {
                 minMessage: 'Сообщение должно содержать минимум 5 символов',
             },
 
-            location: 'Республика Узбекистан, Ферганская область, Учкуприкский район, Богибостан'
+            location: 'Республика Узбекистан, Ферганская область, Учкуприкский район, Богибостан',
+
+            news: 'Новости',
+            allNews: 'Все новости',
+            moreDetails: 'Подробнее',
+            more: 'Все продукты'
         }
     }
 };
