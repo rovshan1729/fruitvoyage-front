@@ -27,7 +27,7 @@ const NewsDetails = () => {
     const formattedDate = dayjs(newData.created_at).format('YYYY-MM-DD');
 
     return (
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 pb-12">
             <Navbar />
 
             <div className="text-lg text-gray-500 mt-8">
