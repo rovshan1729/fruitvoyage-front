@@ -25,11 +25,10 @@ const ProductCategories = ({ data, setSelectCategory, selectCategory }) => {
                     {item.name}
                   </button>
                 </li>
-              )              
+              )
             }
           })}
         </ul>
-
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="absolute right-0 block text-2xl text-gray-700 xl:hidden"
@@ -37,22 +36,24 @@ const ProductCategories = ({ data, setSelectCategory, selectCategory }) => {
           <FiMenu />
         </button>
       </div>
-
       {menuOpen && (
         <div className="mt-4 flex flex-col items-center gap-4 rounded-xl bg-white p-4 shadow-lg xl:hidden">
-          {data.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => {
-                setSelectCategory(item.id);
-                setMenuOpen(false);
-              }}
-              className={linkClass(item.id)}
-            >
-              {item.name}
-            </button>
-          ))}
+          {data
+            .filter(item => item.products.length !== 0)
+            .map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  setSelectCategory(item.id);
+                  setMenuOpen(false);
+                }}
+                className={linkClass(item.id)}
+              >
+                {item.name}
+              </button>
+            ))}
         </div>
+
       )}
     </div>
   );

@@ -20,9 +20,8 @@ const NewsCards = ({ ismore }) => {
     return (
         <div className="max-w-[1200px] mx-auto px-4 text-center my-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">{t('news')}</h2>
-
-            <div className="flex flex-wrap justify-center gap-8 pt-6">
-                {news.map(item => (
+            <div className="flex flex-wrap justify-start gap-8 pt-6">
+                {(ismore ? news.slice(0, 3) : news).map(item => (
                     <NewCard
                         id={item.id}
                         key={item.id}
@@ -33,7 +32,6 @@ const NewsCards = ({ ismore }) => {
                     />
                 ))}
             </div>
-
             {ismore && (
                 <Link
                     to="/news"
