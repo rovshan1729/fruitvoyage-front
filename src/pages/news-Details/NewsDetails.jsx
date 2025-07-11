@@ -7,7 +7,7 @@ import DOMPurify from 'dompurify';
 import Navbar from "@components/ui/Navbar";
 
 const NewsDetails = () => {
-    const { i18n } = useTranslation();
+    const { t,i18n } = useTranslation();
     const params = useParams();
     const [newData, setNewData] = useState(null);
 
@@ -31,9 +31,9 @@ const NewsDetails = () => {
             <Navbar />
 
             <div className="text-lg text-gray-500 mt-8">
-                <Link className="text-green-600 hover:underline" to="/">Home</Link>
+                <Link className="text-green-600 hover:underline" to="/">{t("Home")}</Link>
                 <span className="mx-2">/</span>
-                <Link className="text-green-600 hover:underline" to="/news">News</Link>
+                <Link className="text-green-600 hover:underline" to="/news">{t("News")}</Link>
                 <span className="mx-2">/</span>
                 <span className="text-gray-800 font-medium">{newData.title}</span>
             </div>
