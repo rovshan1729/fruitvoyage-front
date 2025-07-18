@@ -4,8 +4,9 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
     en: {
         translation: {
-            exportTitle: 'Export of Fresh, Dried, and Freeze-Dried Fruits and Vegetables from Uzbekistan',
-            exportDesc: 'Deliveries from the holder of the title "The best exporter of fruits and vegetables of Uzbekistan"',
+            exportTitle: 'Export of dried and freeze-dried fruits, berries, and nuts from Uzbekistan.',
+            exportDesc: 'Fruit Voyage is part of Exim Agro Group - the holder of the title \n' +
+              '“The Best Exporter of Fruits and Vegetables of Uzbekistan”',
             aboutTitle: 'About company',
             aboutDesc: 'Fruit Voyage is a part of the Exim Agro Group and was established in 2019. We export fresh, dried, and freeze-dried fruits, vegetables, and berries from all regions of Uzbekistan. Our shipments reach customers in Japan, Russia, Latvia, and other countries across Europe and Asia.',
             Home: 'Home',
@@ -13,8 +14,8 @@ const resources = {
             Contact: 'Contacts',
             News: 'News',
             exports: 'Years of reliable exports of Uzbek products to global markets.',
-            network: 'A network of partner farms across Uzbekistan.',
-            geography: 'countries — Geography of Fresh, Dried, and Freeze-Dried Fruit and Vegetable Exports from Uzbekistan.',
+            network: 'tons of products exported in 2024.',
+            geography: 'our exports cover Japan, the UK, Sweden, Russia, Germany, Latvia, Poland, the UAE, and more',
             productsTitle: 'Our products',
 
             contactTitle: 'Contact',
@@ -60,8 +61,9 @@ const resources = {
     },
     ru: {
         translation: {
-            exportTitle: 'Экспорт свежих, сушёных и сублимированных фруктов и овощей из Узбекистана.',
-            exportDesc: 'Поставки от обладателя звания "Лучший экспортёр фруктов и овощей Узбекистана"',
+            exportTitle: 'Экспорт сушёных и сублимированных фруктов, ягод и орехов из Узбекистана.',
+            exportDesc: 'Fruit Voyage входит в группу компаний Exim Agro Group - обладателя награды\n' +
+              '"Лучший экспортёр фруктов и овощей Узбекистана"',
             aboutTitle: 'О компании',
             aboutDesc: 'Fruit Voyage является частью группы Exim Agro и была основана в 2019 году. Мы осуществляем экспорт свежих, сушёных и сублимированных фруктов, овощей и ягод из всех регионов Узбекистана. Наша продукция поставляется в Японию, Россию, Латвию, а также в другие страны Европы и Азии.',
             Home: 'Главная',
@@ -69,8 +71,8 @@ const resources = {
             Contact: 'Контакты',
             News: 'Новости',
             exports: 'лет надёжных поставок продукции из Узбекистана на международные рынки.',
-            network: 'партнеров фермерский-хозяйств по всему Узбекистану',
-            geography: 'cтраны — География экспорта свежих, сушёных и сублимированных фруктов и овощей из Узбекистана.',
+            network: 'тонн продукции экспортировано в 2024 году.',
+            geography: 'наш экспорт охватывает Японию, Великобританию, Швецию, Россию, Германию, Латвию, Польшу, ОАЭ и др.',
             productsTitle: 'Наши продукты',
 
             contactTitle: 'Контакты',
