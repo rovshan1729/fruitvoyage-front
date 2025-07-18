@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getPartners } from 'src/services/partners';
 
 const Partners = () => {
-  const [logos, setLogos] = useState<{ id: number; image: string; name: string }[]>([]);
+  const [logos, setLogos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,21 +21,21 @@ const Partners = () => {
   }, []);
 
   return (
-    <section className="w-full py-12 bg-white overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 text-center relative h-[120px]">
+    <section className='w-full overflow-hidden bg-white py-12'>
+      <div className='relative mx-auto h-[120px] max-w-7xl px-4 text-center'>
         {loading ? (
           <p>Loading partners...</p>
         ) : (
-          <div className="logo-track flex gap-16 absolute animate-scroll">
+          <div className='logo-track animate-scroll absolute flex gap-16'>
             {[...logos, ...logos].map((partner, index) => (
               <img
                 key={`${partner.id}-${index}`}
                 src={partner.image}
                 alt={partner.name}
                 onError={(e) => {
-                  e.currentTarget.src = '/fallback-logo.png'; // fallback image
+                  e.currentTarget.src = '/fallback-logo.png';
                 }}
-                className="h-12 w-70 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
+                className='h-24 w-60 object-contain transition-transform duration-300 hover:scale-105 sm:h-32 sm:w-80'
               />
             ))}
           </div>

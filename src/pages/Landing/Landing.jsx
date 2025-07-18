@@ -15,22 +15,22 @@ const Landing = () => {
 
   return (
     <div>
-      <section id="home">
+      <section id='home'>
         <Hero key={i18n.language} />
       </section>
       <Partners />
       <Experience />
-      <section id="products">
+      <section id='products'>
         <Products />
       </section>
-      <section id="news">
+      <section id='news'>
         <News />
       </section>
-      <section id="contact">
-        <Contact />
-      </section>
-      <section id="certificates">
+      <section id='certificates'>
         <Certificates />
+      </section>
+      <section id='contact'>
+        <Contact />
       </section>
       <Footer />
     </div>

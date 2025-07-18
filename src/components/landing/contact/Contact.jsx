@@ -61,42 +61,42 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative">
+    <div className='relative'>
       {showNotification && (
-        <div className="fixed bottom-6 right-6 z-50 rounded-xl bg-green-500 px-6 py-4 text-white shadow-lg animate-fade-in-out">
+        <div className='animate-fade-in-out fixed right-6 bottom-6 z-50 rounded-xl bg-green-500 px-6 py-4 text-white shadow-lg'>
           ✅ {t('successMessage')}
         </div>
       )}
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="mx-auto my-10 w-full max-w-3xl px-4 sm:px-6 lg:px-8 space-y-6 py-8 shadow-lg bg-white rounded-lg"
+        className='mx-auto my-10 w-full max-w-3xl space-y-6 rounded-lg bg-white px-4 py-8 shadow-lg sm:px-6 lg:px-8'
       >
-        <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-4">
-          {t('contactTitle')}
-        </h2>
+        <h2 className='mb-4 text-center text-3xl font-semibold sm:text-4xl'>{t('contactTitle')}</h2>
 
         <div>
-          <label className="block text-base sm:text-lg mb-1">{t('name')}</label>
+          <label className='mb-1 block text-base sm:text-lg'>{t('name')}</label>
           <Controller
-            name="name"
+            name='name'
             control={control}
             rules={rules.name}
-            render={({ field }) => <Input {...field} size="large" placeholder={t('namePlaceholder')} />}
+            render={({ field }) => (
+              <Input {...field} size='large' placeholder={t('namePlaceholder')} />
+            )}
           />
-          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+          {errors.name && <p className='mt-1 text-sm text-red-500'>{errors.name.message}</p>}
         </div>
 
         <div>
-          <label className="block text-base sm:text-lg mb-1">{t('phone')}</label>
+          <label className='mb-1 block text-base sm:text-lg'>{t('phone')}</label>
           <Controller
-            name="phone_number"
+            name='phone_number'
             control={control}
             rules={rules.phone_number}
             render={({ field }) => (
               <Input
                 {...field}
-                size="large"
+                size='large'
                 placeholder={t('phone')}
                 value={field.value || ''}
                 onChange={(e) => {
@@ -118,49 +118,56 @@ const Contact = () => {
             )}
           />
           {errors.phone_number && (
-            <p className="text-red-500 text-sm mt-1">{errors.phone_number.message}</p>
+            <p className='mt-1 text-sm text-red-500'>{errors.phone_number.message}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-base sm:text-lg mb-1">Email</label>
+          <label className='mb-1 block text-base sm:text-lg'>Email</label>
           <Controller
-            name="email"
+            name='email'
             control={control}
             rules={rules.email}
-            render={({ field }) => <Input {...field} size="large" placeholder="example@mail.com" />}
+            render={({ field }) => <Input {...field} size='large' placeholder='example@mail.com' />}
           />
-          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+          {errors.email && <p className='mt-1 text-sm text-red-500'>{errors.email.message}</p>}
         </div>
 
         <div>
-          <label className="block text-base sm:text-lg mb-1">{t('company')}</label>
+          <label className='mb-1 block text-base sm:text-lg'>{t('company')}</label>
           <Controller
-            name="company"
+            name='company'
             control={control}
             rules={rules.company}
-            render={({ field }) => <Input {...field} size="large" placeholder={t('companyPlaceholder')} />}
+            render={({ field }) => (
+              <Input {...field} size='large' placeholder={t('companyPlaceholder')} />
+            )}
           />
-          {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company.message}</p>}
+          {errors.company && <p className='mt-1 text-sm text-red-500'>{errors.company.message}</p>}
         </div>
 
         <div>
-          <label className="block text-base sm:text-lg mb-1">{t('message')}</label>
+          <label className='mb-1 block text-base sm:text-lg'>{t('message')}</label>
           <Controller
-            name="message"
+            name='message'
             control={control}
             rules={rules.message}
             render={({ field }) => (
-              <Input.TextArea {...field} size="large" rows={4} placeholder={t('messagePlaceholder')} />
+              <Input.TextArea
+                {...field}
+                size='large'
+                rows={4}
+                placeholder={t('messagePlaceholder')}
+              />
             )}
           />
-          {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
+          {errors.message && <p className='mt-1 text-sm text-red-500'>{errors.message.message}</p>}
         </div>
 
         <Button
-          type="primary"
-          htmlType="submit"
-          className="!py-5 !font-semibold !text-base sm:!text-lg"
+          type='primary'
+          htmlType='submit'
+          className='!py-5 !text-base !font-semibold sm:!text-lg'
           block
           loading={loading}
         >
