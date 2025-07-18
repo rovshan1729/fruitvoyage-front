@@ -11,17 +11,17 @@ import News from './pages/news/News';
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Landing />} />
-      
-      <Route path="/products" element={<Products />}>
-        <Route path="nuts" element={<Nuts />} />
-        <Route path="fd" element={<Fd />} />
-        <Route path="suxofrukti" element={<SuxoFrukti />} />
-        <Route path="svejiefrukti" element={<SvejieFrukti />} />
+      <Route path='/' element={<Landing />} />
+
+      <Route path='/products' element={<Products />}>
+        <Route path='nuts' element={<Nuts />} />
+        <Route path='fd' element={<Fd />} />
+        <Route path='suxofrukti' element={<SuxoFrukti />} />
+        <Route path='svejiefrukti' element={<SvejieFrukti />} />
       </Route>
 
-      <Route path='/news' element={<News/>}/>
-      <Route path='/news/:id' element={<NewsDetails/>}/>
+      <Route path='/news' element={<News />} />
+      <Route path='/news/:id' element={<NewsDetails />} />
     </Routes>
   );
 };
