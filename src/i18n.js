@@ -17,6 +17,7 @@ const resources = {
             network: 'tons of products exported in 2024.',
             geography: 'our exports cover Japan, the UK, Sweden, Russia, Germany, Latvia, Poland, the UAE, and more',
             productsTitle: 'Our products',
+            certificates: 'Certificates',
 
             contactTitle: 'Contact',
             name: 'Name',
@@ -74,6 +75,7 @@ const resources = {
             network: 'тонн продукции экспортировано в 2024 году.',
             geography: 'наш экспорт охватывает Японию, Великобританию, Швецию, Россию, Германию, Латвию, Польшу, ОАЭ и др.',
             productsTitle: 'Наши продукты',
+            certificates: 'Сертификаты',
 
             contactTitle: 'Контакты',
             name: 'Имя',
